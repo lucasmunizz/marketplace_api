@@ -29,8 +29,8 @@ gem 'rswag-ui'
 # gem "bcrypt", "~> 3.1.7"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'devise', '~> 4.9', '>= 4.9.2'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
-
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
 
@@ -43,8 +43,7 @@ gem 'rack-cors'
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
-  gem 'pry-rails', '~> 0.3.9'
-  gem 'factory_bot_rails', '~> 6.2'
+  gem 'factory_bot_rails'
   gem 'ffaker', '~> 2.21'
   gem 'rspec-rails', '~> 6.0.0'
   gem 'rswag-specs'
@@ -52,6 +51,7 @@ group :development, :test do
 end
 
 group :test do
+  gem 'shoulda-matchers', '~> 5.0'
   gem 'simplecov', require: false
 end
 
