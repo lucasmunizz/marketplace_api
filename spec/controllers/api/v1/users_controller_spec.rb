@@ -12,7 +12,6 @@ RSpec.describe Api::V1::UsersController, type: :controller do
       get :show, params: { id: @user.id }, format: :json
     end
   
-
     it 'returns the information about a reporter on a hash' do
       user_response = JSON.parse(response.body, symbolize_names: true)
       expect(user_response[:email]).to eq @user.email
@@ -53,7 +52,6 @@ RSpec.describe Api::V1::UsersController, type: :controller do
           expect(user_response[:errors][:email]).to include "can't be blank"
         end
     end
-
     end
   end
 end
